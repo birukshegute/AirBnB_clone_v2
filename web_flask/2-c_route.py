@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-/: display “Hello HBNB!”
+""" /: display “Hello HBNB!”
 /hbnb: display “HBNB”
 /c/<text>: display “C ” followed by the value of the text variable"""
 
@@ -12,19 +11,19 @@ app.url_map.strict_slashes = False
 
 
 @app.route('/')
-def hello_world():
+def hello_hbnb():
     """ hello world fuction """
     return 'Hello HBNB!'
 
 
 @app.route('/hbnb')
-def hello():
-    """ hello wrold function """
+def hbnb():
+    """ HBnb function """
     return 'HBNB'
 
 
 @app.route('/c/<text>')
-def c_text(text):
+def c_is_fun(text):
     """ c is fun function """
     text = text.replace('_', ' ')
     return 'C {}'.format(text)

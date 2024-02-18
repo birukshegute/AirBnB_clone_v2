@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Web application listening on 0.0.0.0, port 5000
+""" Web application listening on 0.0.0.0, port 5000
 /: display “Hello HBNB!
 /hbnb: display “HBNB”
 """
@@ -12,13 +11,13 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_world():
+def hello_hbnb():
     """ Hello world functiom """
     return 'Hello HBNB!'
 
 
 @app.route('/hbnb', strict_slashes=False)
-def hello():
+def hbnb():
     """ HBNb function"""
     return 'HBNB'
 

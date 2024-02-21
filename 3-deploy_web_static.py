@@ -23,7 +23,7 @@ def do_pack():
 
 
 def do_deploy(archive_path):
-    """ function to perform the task"""
+    """ function to perform the task on task 2"""
     if exists(archive_path) is False:
         return False
     filename = archive_path.split('/')[-1]
@@ -41,3 +41,12 @@ def do_deploy(archive_path):
         return True
     except:
         return False
+
+
+def deploy():
+    """ Performs full deployment"""
+    new_archive_path = do_pack()
+    if exists(new_archive_path) is False:
+        return False
+    result = do_deploy(new_archive_path)
+    return result

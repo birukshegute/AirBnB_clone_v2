@@ -18,7 +18,7 @@ if models.storage_t == 'db':
                                  primary_key=True))
 
 
-class Place(BaseModeli, Base):
+class Place(BaseModel, Base):
     """ A place class for the project"""
     if models.storage_t == 'db':
         __tablename__ = 'places'

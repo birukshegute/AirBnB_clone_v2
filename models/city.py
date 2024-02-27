@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """ City Module for HBNB project """
-from datetime import datetime
 import models
-from os import getinv
-from sqlalchemy import Column, String, DateTime
-from sqlalchemy.ext.declarative import declarative_base
-import uuid
+from models.base_model import BaseModel, Base
+from os import getenv
+from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy.orm import relationship
 
 
 class City(BaseModel, Base):

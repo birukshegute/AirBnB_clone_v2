@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines a class User"""
+""" holds class User"""
 import models
 from models.base_model import BaseModel, Base
 from os import getenv
@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship
 
 
 class User(BaseModel, Base):
-    """This class defines a user by various attributes"""
+    """Representation of a user """
     if models.storage_t == 'db':
         __tablename__ = 'users'
         email = Column(String(128), nullable=False)
@@ -19,11 +19,11 @@ class User(BaseModel, Base):
         places = relationship("Place", backref="user")
         reviews = relationship("Review", backref="user")
     else:
-        email = ''
-        password = ''
-        first_name = ''
-        last_name = ''
+        email = ""
+        password = ""
+        first_name = ""
+        last_name = ""
 
     def __init__(self, *args, **kwargs):
-        """initializes the class User"""
+        """initializes user"""
         super().__init__(*args, **kwargs)

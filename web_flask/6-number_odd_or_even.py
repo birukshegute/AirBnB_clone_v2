@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/airbnb-onepage/')
+@app.route('/')
 def hello_hbnb():
     """ hello world fuction """
     return 'Hello HBNB!'
@@ -52,7 +52,7 @@ def number_template(n):
     return render_template('5-number.html', n=n)
 
 
-@app.route('/airbnb-onepage/number_odd_or_even/<int:n>')
+@app.route('/number_odd_or_even/<int:n>')
 def odd_or_even(n):
     """displays nis odd or n is even"""
     return render_template('6-number_odd_or_even.html', n=n)
